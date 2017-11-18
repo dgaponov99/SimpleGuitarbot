@@ -1,2 +1,2 @@
 TOKEN = '442370610:AAHZ0eYC7Bx9Qsm9qNIaJJgK-LKUgmxjUj4'
-#привет, Полина
+#привет полина
