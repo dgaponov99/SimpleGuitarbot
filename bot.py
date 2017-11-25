@@ -30,7 +30,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url="айпи")
+    bot.set_webhook(url="https://mysterious-waters-31057.herokuapp.com/")
     return "!", 200
 
 
