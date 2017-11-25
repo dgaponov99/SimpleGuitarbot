@@ -1,3 +1,0 @@
-telebot
-os
-flask import Flask, request
