@@ -30,7 +30,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url="сервер")
+    bot.set_webhook(url="https://young-spire-57980.herokuapp.com/")
     return "!", 200
 
 
