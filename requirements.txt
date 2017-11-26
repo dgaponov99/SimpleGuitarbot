@@ -1,2 +1,3 @@
-pyTelegramBotAPI
-request
+cherrypy
+telebot
+logging
