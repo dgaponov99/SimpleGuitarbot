@@ -1,3 +1,2 @@
-cherrypy
 telebot
-logging
+flask
