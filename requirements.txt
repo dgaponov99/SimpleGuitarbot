@@ -1,4 +1,2 @@
 telebot
-os
-Flask
 request
