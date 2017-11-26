@@ -1,2 +1,2 @@
-telebot
+pyTelegramBotAPI
 request
