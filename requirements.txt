@@ -1,2 +1,2 @@
-telebot
+pytelegrambotapi == 3.5.0
 flask
