@@ -28,7 +28,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url="https://boiling-badlands-53405.herokuapp.com/bot")
+    bot.set_webhook(url="https://quiet-springs-54074.herokuapp.com/bot")
     return "!", 200
 
 
