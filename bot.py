@@ -29,7 +29,7 @@ def start(message):
 @bot.message_handler(content_types=["text"])
 def send_photo(message):
     try:
-        image = open('res/chords/' + message.text.upper + '.jpg', 'rb')
+        image = open('res/chords/' + message.text.upper() + '.jpg', 'rb')
         bot.send_photo(message.chat.id, image)
         image.close()
     except FileNotFoundError:
