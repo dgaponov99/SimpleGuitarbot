@@ -2,6 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deb95bd2-be36-45ec-9f53-b7dbca5dc2cc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/AM.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/C.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/CM.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/D.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/DM.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/E.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/EM.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/F.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/FM.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/G.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/GM.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/H.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/chords/HM.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bot.py" afterPath="$PROJECT_DIR$/bot.py" />
     </list>
@@ -27,14 +41,13 @@
       <file leaf-file-name="bot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="410">
+              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <element signature="e#275#389#0" expanded="false" />
-                <element signature="e#430#506#0" expanded="false" />
-                <element signature="e#574#637#0" expanded="false" />
-                <element signature="e#743#778#0" expanded="false" />
+                <element signature="e#212#326#0" expanded="false" />
+                <element signature="e#367#443#0" expanded="false" />
+                <element signature="e#511#574#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -93,9 +106,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1301" />
-    <option name="height" value="716" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -136,6 +149,17 @@
               <item name="SimpleGuitarbot" type="b2602c69:ProjectViewProjectNode" />
               <item name="SimpleGuitarbot" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SimpleGuitarbot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimpleGuitarbot" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SimpleGuitarbot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimpleGuitarbot" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="chords" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -148,6 +172,9 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -345,7 +372,21 @@
       <option name="project" value="LOCAL" />
       <updated>1512246582897</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="updates">
+      <created>1512246760668</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1512246760668</updated>
+    </task>
+    <task id="LOCAL-00017" summary="updates">
+      <created>1512246971044</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1512246971044</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -360,7 +401,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.49721116" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3258786" sideWeight="0.49402392" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258786" sideWeight="0.49402392" order="7" side_tool="false" content_ui="tabs" x="82" y="280" width="1263" height="204" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -621,14 +662,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="410">
+          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <element signature="e#275#389#0" expanded="false" />
-            <element signature="e#430#506#0" expanded="false" />
-            <element signature="e#574#637#0" expanded="false" />
-            <element signature="e#743#778#0" expanded="false" />
+            <element signature="e#212#326#0" expanded="false" />
+            <element signature="e#367#443#0" expanded="false" />
+            <element signature="e#511#574#0" expanded="false" />
           </folding>
         </state>
       </provider>
