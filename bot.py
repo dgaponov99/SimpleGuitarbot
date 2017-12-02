@@ -8,8 +8,6 @@ bot = telebot.TeleBot(Config.TOKEN)
 
 server = Flask(__name__)
 
-server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
-
 
 @server.route('/' + Config.TOKEN, methods=['POST'])
 def get_message():
@@ -32,3 +30,6 @@ def start(message):
 @bot.message_handler(func=lambda message: True, content_types=['text'])
 def echo_message(message):
     bot.reply_to(message, message.text)
+
+
+server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
