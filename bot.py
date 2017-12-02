@@ -23,10 +23,6 @@ def webhook():
     return "!", 200
 
 
-server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера
-server = Flask(__name__)  # Наверно это нужно, чтобы Heroku не засыпал (работает и без этой строки)
-
-
 # Комманда "/start"
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -42,3 +38,7 @@ def send_chords(message):
         image.close()
     except FileNotFoundError:
         bot.send_message(message.chat.id, 'В нашей базе нет такого аккорда')
+
+
+server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера
+server = Flask(__name__)  # Наверно это нужно, чтобы Heroku не засыпал (работает и без этой строки)
