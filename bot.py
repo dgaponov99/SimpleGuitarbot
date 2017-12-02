@@ -7,6 +7,7 @@ import Config
 bot = telebot.TeleBot(Config.TOKEN)
 
 server = Flask(__name__)
+server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
 
 
 @server.route('/' + Config.TOKEN, methods=['POST'])
@@ -32,4 +33,3 @@ def echo_message(message):
     bot.reply_to(message, message.text)
 
 
-server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
