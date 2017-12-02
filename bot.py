@@ -34,7 +34,7 @@ def start(message):
 def send_chords(message):
     try:
         image = open('res/chords/' + message.text.upper() + '.jpg', 'rb')
-        bot.send_photo(message.chat.id, image)
+        bot.send_photo(message.chat.id, image, caption=message.text)
         image.close()
     except FileNotFoundError:
         bot.send_message(message.chat.id, 'В нашей базе нет такого аккорда')
