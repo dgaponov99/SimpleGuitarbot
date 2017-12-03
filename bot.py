@@ -29,6 +29,15 @@ def start(message):
     bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
 
 
+# Отправка камертона
+@bot.message_handler(commands=["tuner"])
+def send_tuner(message):
+    f = open('res/tuner.ogg', 'rb')
+    msg = bot.send_voice(message.chat.id, f, None)
+    f.close()
+    bot.send_message(message.chat.id, msg.voice.file_id)
+
+
 # Отправка изображения аккорда
 @bot.message_handler(content_types=["text"])
 def send_chords(message):
@@ -38,15 +47,6 @@ def send_chords(message):
         image.close()
     except FileNotFoundError:
         bot.send_message(message.chat.id, 'В нашей базе нет такого аккорда')
-
-
-# Отправка камертона
-@bot.message_handler(commands=["tuner"])
-def send_tuner(message):
-    f = open('res/tuner.ogg', 'rb')
-    msg = bot.send_voice(message.chat.id, f, None)
-    f.close()
-    bot.send_message(message.chat.id, msg.voice.file_id)
 
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера
