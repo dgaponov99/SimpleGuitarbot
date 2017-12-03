@@ -1,9 +1,13 @@
-import telebot
 import os
-from flask import Flask, request
-import config
 
-bot = telebot.TeleBot(config.TOKEN)  # Создание бота как объекта
+import telebot
+from flask import Flask, request
+
+import config
+from res import string_values
+from res import files_id
+
+bot = telebot.TeleBot(config.TOKEN)  # Создание объекта бота
 
 server = Flask(__name__)  # Создание сервера
 
@@ -25,25 +29,35 @@ def webhook():
 
 # Комманда "/start"
 @bot.message_handler(commands=['start'])
-def start(message):
-    bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
+def send_start(message):
+    bot.send_message(message.chat.id,
+                     string_values.hello + message.from_user.first_name + '!' +
+                     '\n' + string_values.description)
+
+
+# Комманда "/help"
+@bot.message_handler(commands=['help'])
+def send_help(message):
+    bot.send_message(message.chat.id, string_values.help_description)
 
 
 # Отправка камертона
 @bot.message_handler(commands=["tuner"])
 def send_tuner(message):
-    bot.send_voice(message.chat.id, config.tuner_id, caption='Нота Ля первой октавы (440Hz)')
+    bot.send_voice(message.chat.id, files_id.tuner_id, caption=string_values.cpt_tuner)
 
 
 # Отправка изображения аккорда
 @bot.message_handler(content_types=["text"])
 def send_chords(message):
     try:
+        # Попытка открытия и отправки картинки
         image = open('res/chords/' + message.text.upper() + '.jpg', 'rb')
         bot.send_photo(message.chat.id, image, caption=message.text)
         image.close()
     except FileNotFoundError:
-        bot.send_message(message.chat.id, 'В нашей базе нет такого аккорда')
+        # Если такой картинки нет говорим об этом
+        bot.send_message(message.chat.id, string_values.not_found_chord)
 
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера

@@ -1,2 +1,2 @@
-pytelegrambotapi == 3.5.0
+pyTelegramBotApi == 3.5.0
 flask
