@@ -40,5 +40,13 @@ def send_chords(message):
         bot.send_message(message.chat.id, 'В нашей базе нет такого аккорда')
 
 
+# Отправка камертона
+@bot.message_handler(commands=["tuner"])
+def send_tuner(message):
+    f = open('res/tuner.ogg', 'rb')
+    msg = bot.send_voice(message.chat.id, f, None)
+    f.close()
+    bot.send_message(message.chat.id, msg.voice.file_id)
+
+
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера
-server = Flask(__name__)  # Наверно это нужно, чтобы Heroku не засыпал (работает и без этой строки)
