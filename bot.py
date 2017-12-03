@@ -32,10 +32,7 @@ def start(message):
 # Отправка камертона
 @bot.message_handler(commands=["tuner"])
 def send_tuner(message):
-    f = open('res/tuner.ogg', 'rb')
-    msg = bot.send_voice(message.chat.id, f, None)
-    f.close()
-    bot.send_message(message.chat.id, msg.voice.file_id)
+    bot.send_voice(message.chat.id, config.tuner_id, caption='Нота Ля первой октавы (440Hz)')
 
 
 # Отправка изображения аккорда
