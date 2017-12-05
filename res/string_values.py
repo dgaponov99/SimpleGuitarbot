@@ -3,8 +3,8 @@
 cpt_tuner = 'Нота Ля первой октавы (440Hz)'
 not_found_chord = 'В нашей базе нет такого аккорда'
 description = 'Для получения информации о боте воспользуйтесь командой /help'
-hello = 'Доброго времени суток, '
-help_description = 'описание'
+hello = 'Здравствуйте, '
+help_description = 'Описание'  # Изменить!
 tutorial = """ Возможные команды:
 /tuning
 /tuning_uku

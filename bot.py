@@ -54,17 +54,18 @@ def send_tuning_uku(message):
 
 
 # Команда "/memes"
-#@bot.message_handler(commands=['memes'])
-#def send_memes(message):
-    #bot.send_message(message.chat.id, string_values.memes)
+# @bot.message_handler(commands=['memes'])
+# def send_memes(message):
+# bot.send_message(message.chat.id, string_values.memes)
 
 
 # Команда "/parts"
 @bot.message_handler(commands=['parts'])
 def send_parts(message):
-    image=open('res/tutorial/parts.jpg', 'rb')
+    image = open('res/tutorial/parts.jpg', 'rb')
     bot.send_photo(message.chat.id, image)
     image.close()
+
 
 # Команда "/tuning"
 @bot.message_handler(commands=['tuning'])
