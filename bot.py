@@ -27,7 +27,7 @@ def webhook():
     return "!", 200
 
 
-# Комманда "/start"
+# Команда "/start"
 @bot.message_handler(commands=['start'])
 def send_start(message):
     bot.send_message(message.chat.id,
@@ -35,10 +35,41 @@ def send_start(message):
                      '\n' + string_values.description)
 
 
-# Комманда "/help"
+# Команда "/help"
 @bot.message_handler(commands=['help'])
 def send_help(message):
     bot.send_message(message.chat.id, string_values.help_description)
+
+
+# Команда "/tutorial"
+@bot.message_handler(commands=['tutorial'])
+def send_tutorial(message):
+    bot.send_message(message.chat.id, string_values.tutorial)
+
+
+# Команда "/tuning_uku"
+@bot.message_handler(commands=['tuning_uku'])
+def send_tuning_uku(message):
+    bot.send_message(message.chat.id, string_values.tuning_ukulele)
+
+
+# Команда "/memes"
+#@bot.message_handler(commands=['memes'])
+#def send_memes(message):
+    #bot.send_message(message.chat.id, string_values.memes)
+
+
+# Команда "/parts"
+@bot.message_handler(commands=['parts'])
+def send_parts(message):
+    image=open('res/tutorial/parts.jpg', 'rb')
+    bot.send_photo(message.chat.id, image)
+    image.close()
+
+# Команда "/tuning"
+@bot.message_handler(commands=['tuning'])
+def send_tuning(message):
+    bot.send_message(message.chat.id, string_values.tuning)
 
 
 # Отправка камертона
@@ -56,7 +87,7 @@ def send_chords(message):
         bot.send_photo(message.chat.id, image, caption=message.text)
         image.close()
     except FileNotFoundError:
-        # Если такой картинки нет говорим об этом
+        # Если такой картинки нет, говорим об этом
         bot.send_message(message.chat.id, string_values.not_found_chord)
 
 
