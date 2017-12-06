@@ -61,7 +61,8 @@ def send_tuning_uku(message):
 def send_parts(message):
     """Команда /parts"""
     image = open('res/tutorial_image/parts_of_guitar.jpg', 'rb')
-    bot.send_photo(message.chat.id, image)
+    msg = bot.send_photo(message.chat.id, image)
+    bot.send_message(message.chat.id, msg.photo[0].file_id)
     image.close()
 
 
@@ -108,8 +109,8 @@ def send_chords(message):
             else:
                 keyboard = types.InlineKeyboardMarkup()
                 keyboard.add(types.InlineKeyboardButton(text=string_values.to_offer,
-                                                        callback_data=str(message.from_user.first_name) + '^' + str(
-                                                            message.chat.id) + '^' + str(message.text)))
+                                                        callback_data=str(message.from_user.first_name) + '$' + str(
+                                                            message.chat.id) + '$' + str(message.text)))
                 bot.send_message(message.chat.id, string_values.text_inline_button, reply_markup=keyboard)
         else:
             for chord_file_id in chord_files_id:
@@ -121,7 +122,7 @@ def send_chords(message):
 @bot.callback_query_handler(func=lambda c: True)
 def inline(c):
     """Отправка администраторам заявки на рассмотрение аккорда"""
-    a = c.data.split('^')
+    a = c.data.split('$')
     for admin in config.ADMINS:
         bot.send_message(admin, string_values.message_to_admins.format(a[0], a[1], a[2]))
 
