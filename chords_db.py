@@ -11,7 +11,10 @@ collection = db['chords']
 
 def get_files_id(chord):
     global collection
-    return collection.find_one({'chord': chord})['files_id']
+    try:
+        return collection.find_one({'chord': chord})['files_id']
+    except TypeError:
+        return None
 
 
 def set_files_id(chord, files_id):

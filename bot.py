@@ -110,7 +110,7 @@ def send_chords(message):
             bot.send_message(message.chat.id, string_values.text_inline_button, reply_markup=keyboard)
     else:
         for id_list in chord_files_id:
-            bot.send_message(message.chat.id, id_list)
+            bot.send_photo(message.chat.id, id_list)
 
 
 
