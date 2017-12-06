@@ -101,8 +101,7 @@ def send_chords(message):
             for chord_url in chord_urls:
                 chord_files_id = []
                 img = requests.get(chord_url)
-                msg = bot.send_photo(message.chat.id, img.content, caption=caption)
-                bot.send_message(message.chat.id, msg.photo.file_id)
+                msg = bot.send_photo(message.chat.id, img.content, None)
                 chord_files_id.append(msg.photo.file_id)
             chords_db.set_files_id(message.text.lower(), chord_files_id)
         else:
