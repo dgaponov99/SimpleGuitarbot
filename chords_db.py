@@ -5,6 +5,7 @@ import config
 LINK = config.LINK
 db = MongoClient(LINK).SimpleGuitarbot
 collection = db.chords
+collection.insert_one({'chord': 'dd'})
 
 
 def get_files_id(chord):
