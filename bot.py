@@ -121,7 +121,7 @@ def send_chords(message):
 @bot.callback_query_handler(func=lambda c: True)
 def inline(c):
     """Отправка администраторам заявки на рассмотрение аккорда"""
-    a = c.data.splite('^')
+    a = c.data.split('^')
     for admin in config.ADMINS:
         bot.send_message(admin, string_values.message_to_admins.format(a[0], a[1], a[2]))
 
