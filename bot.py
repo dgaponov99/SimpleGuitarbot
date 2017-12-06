@@ -3,6 +3,7 @@ import os
 import requests
 import telebot
 from flask import Flask, request
+from telebot import types
 
 import config
 from res import string_values
@@ -92,6 +93,15 @@ def send_chords(message):
             bot.send_photo(message.chat.id, img.content, caption=caption)
     else:
         bot.send_message(message.chat.id, 'Такого аккорда нет')  # Добавить кнопку предложения
+        keyboard = types.InlineKeyboardMarkup()
+        keyboard.add(types.InlineKeyboardButton(text='Предложить', callback_data=message.text))
+        bot.send_message(message.chat.id, "Если такой аккорд существует, предложите его", reply_markup=keyboard)
+
+
+@bot.callback_query_handler(func=lambda c: True)
+def inline(c):
+    for admin in ['445372638', '404752400']:
+        bot.send_message(chat_id=admin, text='пользователь ' + str(c.message.chat.id) + ' хочет добавить аккорд ' + c.data)
 
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера
