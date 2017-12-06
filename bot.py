@@ -35,25 +35,25 @@ def webhook():
 def send_start(message):
     bot.send_message(message.chat.id,
                      string_values.hello + message.from_user.first_name + '!' +
-                     '\n' + string_values.description)
+                     '\n' + string_values.description, parse_mode='HTML')
 
 
 # Команда "/help"
 @bot.message_handler(commands=['help'])
 def send_help(message):
-    bot.send_message(message.chat.id, string_values.help_description)
+    bot.send_message(message.chat.id, string_values.help_description, parse_mode='HTML')
 
 
 # Команда "/tutorial"
 @bot.message_handler(commands=['tutorial'])
 def send_tutorial(message):
-    bot.send_message(message.chat.id, string_values.tutorial)
+    bot.send_message(message.chat.id, string_values.tutorial, parse_mode='HTML')
 
 
 # Команда "/tuning_uku"
 @bot.message_handler(commands=['tuning_uku'])
 def send_tuning_uku(message):
-    bot.send_message(message.chat.id, string_values.tuning_ukulele)
+    bot.send_message(message.chat.id, string_values.tuning_ukulele, parse_mode='HTML')
 
 
 # Команда "/memes"
@@ -73,13 +73,25 @@ def send_parts(message):
 # Команда "/tuning"
 @bot.message_handler(commands=['tuning'])
 def send_tuning(message):
-    bot.send_message(message.chat.id, string_values.tuning)
+    bot.send_message(message.chat.id, string_values.tuning, parse_mode='HTML')
 
 
 # Отправка камертона
 @bot.message_handler(commands=["tuner"])
 def send_tuner(message):
     bot.send_voice(message.chat.id, files_id.tuner_id, caption=string_values.cpt_tuner)
+
+
+# Команда "/care"
+@bot.message_handler(commands=['care'])
+def send_care(message):
+    bot.send_message(message.chat.id, string_values.care)
+
+
+# Команда "/experience"
+@bot.message_handler(commands=['experience'])
+def send_experience(message):
+    bot.send_message(message.chat.id, string_values.experience, parse_mode='HTML')
 
 
 # Отправка изображения аккорда
