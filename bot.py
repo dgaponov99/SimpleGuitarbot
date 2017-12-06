@@ -102,7 +102,7 @@ def send_chords(message):
                 chord_files_id = []
                 img = requests.get(chord_url)
                 msg = bot.send_photo(message.chat.id, img.content, None)
-                chord_files_id.append(msg.photosize.file_id)
+                chord_files_id.append(msg.photo[0].file_id)
             chords_db.set_files_id(message.text.lower(), chord_files_id)
         else:
             keyboard = types.InlineKeyboardMarkup()
