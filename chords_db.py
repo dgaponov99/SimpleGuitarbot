@@ -5,7 +5,7 @@ import config
 LINK = config.LINK
 client = MongoClient(LINK)
 
-db = client.test
+db = client.local
 collection = db['chords']
 
 
