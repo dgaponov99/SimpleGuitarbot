@@ -3,16 +3,14 @@ from pymongo import MongoClient
 import config
 
 LINK = config.LINK
-client = MongoClient(LINK)
-
-db = client.local
-collection = db['chords']
+db = MongoClient(LINK).SimpleGuitarbot
+collection = db.chords
 
 
 def get_files_id(chord):
     global collection
     try:
-        print(collection.find_one({'chord': chord}))
+        # print(collection.find_one({'chord': chord}))
         return collection.find_one({'chord': chord})['files_id']
     except TypeError:
         return None
