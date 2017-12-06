@@ -108,9 +108,7 @@ def send_chords(message):
             else:
                 keyboard = types.InlineKeyboardMarkup()
                 keyboard.add(types.InlineKeyboardButton(text=string_values.to_offer,
-                                                        callback_data=string_values.message_to_admins.format(
-                                                            message.from_user.first_name, message.chat.id, message.text)
-                                                        ))
+                                                        callback_data=message.from_user.first_name + '^' + message.chat.id + '^' + message.text))
                 bot.send_message(message.chat.id, string_values.text_inline_button, reply_markup=keyboard)
         else:
             for chord_file_id in chord_files_id:
@@ -122,8 +120,9 @@ def send_chords(message):
 @bot.callback_query_handler(func=lambda c: True)
 def inline(c):
     """Отправка администраторам заявки на рассмотрение аккорда"""
+    a = c.data.splite('^')
     for admin in config.ADMINS:
-        bot.send_message(admin, c.data)
+        bot.send_message(admin, string_values.message_to_admins.format(a[0], a[1], a[2]))
 
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера
