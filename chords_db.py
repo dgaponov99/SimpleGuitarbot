@@ -12,6 +12,7 @@ collection = db['chords']
 def get_files_id(chord):
     global collection
     try:
+        print(collection.find_one({'chord': chord}))
         return collection.find_one({'chord': chord})['files_id']
     except TypeError:
         return None
