@@ -99,11 +99,12 @@ def send_chords(message):
         caption, chord_urls = chord.getUrl()
         if len(caption) > 0:
             for chord_url in chord_urls:
-                chord_files_id = []
+                ids = []
                 img = requests.get(chord_url)
                 msg = bot.send_photo(message.chat.id, img.content, None)
-                chord_files_id.append(msg.photo[0].file_id)
-            chords_db.set_files_id(message.text.lower(), chord_files_id)
+                ids.append(msg.photo[0].file_id)
+            bot.send_message(message.chat.id, str(ids))
+            chords_db.set_files_id(message.text.lower(), ids)
         else:
             keyboard = types.InlineKeyboardMarkup()
             keyboard.add(types.InlineKeyboardButton(text='Предложить', callback_data=message.text))
