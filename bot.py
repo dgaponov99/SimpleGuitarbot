@@ -1,11 +1,13 @@
 import os
 
+import requests
 import telebot
 from flask import Flask, request
 
 import config
 from res import string_values
 from res import files_id
+import parser
 
 bot = telebot.TeleBot(config.TOKEN)  # Создание объекта бота
 
@@ -82,14 +84,14 @@ def send_tuner(message):
 # Отправка изображения аккорда
 @bot.message_handler(content_types=["text"])
 def send_chords(message):
-    try:
-        # Попытка открытия и отправки картинки
-        image = open('res/chords/' + message.text.upper() + '.jpg', 'rb')
-        bot.send_photo(message.chat.id, image, caption=message.text)
-        image.close()
-    except FileNotFoundError:
-        # Если такой картинки нет, говорим об этом
-        bot.send_message(message.chat.id, string_values.not_found_chord)
+    chord = parser.Images_chord(message.text)
+    caption, chord_urls = chord.getUrl()
+    if len(caption) > 0:
+        for chord_url in chord_urls:
+            img = requests.get(chord_url)
+            bot.send_photo(message.chat.id, img.content, caption=caption)
+    else:
+        bot.send_message(message.chat.id, 'Такого аккорда нет')  # Добавить кнопку предложения
 
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера
