@@ -101,17 +101,17 @@ def send_chords(message):
             for chord_url in chord_urls:
                 chord_files_id = []
                 img = requests.get(chord_url)
-                id_list = bot.send_photo(message.chat.id, img.content, caption=caption)
-                chord_files_id.append(id_list.photo.file_id)
+                msg = bot.send_photo(message.chat.id, img.content, caption=caption)
+                bot.send_message(message.chat.id, msg.photo.file_id)
+                chord_files_id.append(msg.photo.file_id)
             chords_db.set_files_id(message.text.lower(), chord_files_id)
         else:
             keyboard = types.InlineKeyboardMarkup()
             keyboard.add(types.InlineKeyboardButton(text='Предложить', callback_data=message.text))
             bot.send_message(message.chat.id, string_values.text_inline_button, reply_markup=keyboard)
     else:
-        for id_list in chord_files_id:
-            bot.send_photo(message.chat.id, id_list)
-
+        for chord_file_id in chord_files_id:
+            bot.send_photo(message.chat.id, chord_file_id)
 
 
 @bot.callback_query_handler(func=lambda c: True)
