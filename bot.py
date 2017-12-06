@@ -16,108 +16,114 @@ bot = telebot.TeleBot(config.TOKEN)  # Создание объекта бота
 server = Flask(__name__)  # Создание сервера
 
 
-# Прием сообщений
 @server.route('/' + config.TOKEN, methods=['POST'])
 def get_message():
+    """Прием сообщений"""
     bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
     return "!", 200
 
 
-# Установка вебхуков
 @server.route("/")
 def webhook():
+    """Установка вебхуков"""
     bot.remove_webhook()
     bot.set_webhook(url=config.URL)
     return "!", 200
 
 
-# Команда "/start"
 @bot.message_handler(commands=['start'])
 def send_start(message):
+    """Команда /start"""
     bot.send_message(message.chat.id,
                      string_values.hello + message.from_user.first_name + '!' +
                      '\n' + string_values.description, parse_mode='HTML')
 
 
-# Команда "/help"
 @bot.message_handler(commands=['help'])
 def send_help(message):
+    """Команда /help"""
     bot.send_message(message.chat.id, string_values.help_description, parse_mode='HTML')
 
 
-# Команда "/tutorial"
-@bot.message_handler(commands=['tutorial'])
+@bot.message_handler(commands=['tutorial_image'])
 def send_tutorial(message):
+    """Команда /tutorial_image"""
     bot.send_message(message.chat.id, string_values.tutorial, parse_mode='HTML')
 
 
-# Команда "/tuning_uku"
 @bot.message_handler(commands=['tuning_uku'])
 def send_tuning_uku(message):
+    """Команда /tuning_uku"""
     bot.send_message(message.chat.id, string_values.tuning_ukulele, parse_mode='HTML')
 
 
-# Команда "/parts"
 @bot.message_handler(commands=['parts'])
 def send_parts(message):
-    image = open('res/tutorial/parts.jpg', 'rb')
+    """Команда /parts"""
+    image = open('res/tutorial_image/parts_of_guitar.jpg', 'rb')
     bot.send_photo(message.chat.id, image)
     image.close()
 
 
-# Команда "/tuning"
 @bot.message_handler(commands=['tuning'])
 def send_tuning(message):
+    """Команда /tuning"""
     bot.send_message(message.chat.id, string_values.tuning, parse_mode='HTML')
 
 
-# Отправка камертона
 @bot.message_handler(commands=["tuner"])
 def send_tuner(message):
+    """Отправка камертона"""
     bot.send_voice(message.chat.id, files_id.tuner_id, caption=string_values.cpt_tuner)
 
 
-# Команда "/care"
 @bot.message_handler(commands=['care'])
 def send_care(message):
+    """Команда /care"""
     bot.send_message(message.chat.id, string_values.care, parse_mode='HTML')
 
 
-# Команда "/experience"
 @bot.message_handler(commands=['experience'])
 def send_experience(message):
+    """Команда /experience"""
     bot.send_message(message.chat.id, string_values.experience, parse_mode='HTML')
 
 
-# Отправка изображения аккорда
 @bot.message_handler(content_types=["text"])
 def send_chords(message):
-    chord_files_id = chords_db.get_files_id(message.text.lower())
-    if chord_files_id is None:
-        bot.send_message(message.chat.id, string_values.update)
-        chord = parser.Images_chord(message.text)
-        caption, chord_urls = chord.getUrl()
-        if len(caption) > 0:
-            ids = []
-            for chord_url in chord_urls:
-                img = requests.get(chord_url)
-                msg = bot.send_photo(message.chat.id, img.content, None)
-                ids.append(msg.photo[0].file_id)
-            chords_db.set_files_id(message.text.lower(), ids)
+    """Отправка изображения аккорда"""
+    if len(message.text) < 10:
+        cap, chord_files_id = chords_db.get_files_id(message.text.lower())
+        if chord_files_id is None:
+            bot.send_message(message.chat.id, string_values.update)
+            chord = parser.Images_chord(message.text)
+            caption, chord_urls = chord.get_Url()
+            if len(caption) > 0:
+                ids = []
+                for chord_url in chord_urls:
+                    img = requests.get(chord_url)
+                    file = bot.send_photo(message.chat.id, img.content, caption=caption)
+                    ids.append(file.photo[0].file_id)
+                chords_db.set_files_id(message.text.lower(), ids, caption)
+            else:
+                keyboard = types.InlineKeyboardMarkup()
+                keyboard.add(types.InlineKeyboardButton(text=string_values.to_offer, callback_data=message.text))
+                bot.send_message(message.chat.id, string_values.text_inline_button, reply_markup=keyboard)
         else:
-            keyboard = types.InlineKeyboardMarkup()
-            keyboard.add(types.InlineKeyboardButton(text='Предложить', callback_data=message.text))
-            bot.send_message(message.chat.id, string_values.text_inline_button, reply_markup=keyboard)
+            for chord_file_id in chord_files_id:
+                bot.send_photo(message.chat.id, chord_file_id, caption=cap)
     else:
-        for chord_file_id in chord_files_id:
-            bot.send_photo(message.chat.id, chord_file_id)
+        bot.send_message(message.chat.id, string_values.not_exist)
 
 
 @bot.callback_query_handler(func=lambda c: True)
 def inline(c):
-    for admin in ['445372638', '404752400']:
-        bot.send_message(chat_id=admin,
-                         text='пользователь ' + str(c.message.chat.id) + ' хочет добавить аккорд ' + c.data)
+    """Отправка администраторам заявки на рассмотрение аккорда"""
+    for admin in config.ADMINS:
+        bot.send_message(admin,
+                         string_values.message_to_admins.format(str(c.message.from_user.first_name),
+                                                                str(c.message.chat.id),
+                                                                str(c.message.text)))
 
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера

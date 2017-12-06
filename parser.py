@@ -43,7 +43,7 @@ class Images_chord:
         self.chord = _Chord(chord)
         self.website = 'http://www.gitaristu.ru'
 
-    def getUrl(self):
+    def get_Url(self):
         """Возвращает название аккорда и список url изображений"""
 
         image_list = []
