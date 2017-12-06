@@ -56,12 +56,6 @@ def send_tuning_uku(message):
     bot.send_message(message.chat.id, string_values.tuning_ukulele, parse_mode='HTML')
 
 
-# Команда "/memes"
-# @bot.message_handler(commands=['memes'])
-# def send_memes(message):
-# bot.send_message(message.chat.id, string_values.memes)
-
-
 # Команда "/parts"
 @bot.message_handler(commands=['parts'])
 def send_parts(message):
@@ -85,7 +79,7 @@ def send_tuner(message):
 # Команда "/care"
 @bot.message_handler(commands=['care'])
 def send_care(message):
-    bot.send_message(message.chat.id, string_values.care)
+    bot.send_message(message.chat.id, string_values.care, parse_mode='HTML')
 
 
 # Команда "/experience"
@@ -112,7 +106,8 @@ def send_chords(message):
 @bot.callback_query_handler(func=lambda c: True)
 def inline(c):
     for admin in ['445372638', '404752400']:
-        bot.send_message(chat_id=admin, text='пользователь ' + str(c.message.chat.id) + ' хочет добавить аккорд ' + c.data)
+        bot.send_message(chat_id=admin,
+                         text='пользователь ' + str(c.message.chat.id) + ' хочет добавить аккорд ' + c.data)
 
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера
