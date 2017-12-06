@@ -91,8 +91,8 @@ def send_experience(message):
 
 # Отправка изображения аккорда
 @bot.message_handler(content_types=["text"])
-def send_chords(message):
-    chord_files_id = chords_db.get_files_id(message.text.lower())
+async def send_chords(message):
+    chord_files_id = await chords_db.get_files_id(message.text.lower())
     if chord_files_id is None:
         bot.send_message(message.chat.id, string_values.update)
         chord = parser.Images_chord(message.text)
