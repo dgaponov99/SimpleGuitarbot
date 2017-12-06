@@ -9,6 +9,7 @@ import config
 from res import string_values
 from res import files_id
 import parser
+import chords_db
 
 bot = telebot.TeleBot(config.TOKEN)  # Создание объекта бота
 
@@ -91,16 +92,26 @@ def send_experience(message):
 # Отправка изображения аккорда
 @bot.message_handler(content_types=["text"])
 def send_chords(message):
-    chord = parser.Images_chord(message.text)
-    caption, chord_urls = chord.getUrl()
-    if len(caption) > 0:
-        for chord_url in chord_urls:
-            img = requests.get(chord_url)
-            bot.send_photo(message.chat.id, img.content, caption=caption)
+    chord_files_id = chords_db.get_files_id(message.text.lower())
+    if chord_files_id is None:
+        bot.send_message(message.chat.id, string_values.update)
+        chord = parser.Images_chord(message.text)
+        caption, chord_urls = chord.getUrl()
+        if len(caption) > 0:
+            for chord_url in chord_urls:
+                chord_files_id = []
+                img = requests.get(chord_url)
+                id_list = bot.send_photo(message.chat.id, img.content, caption=caption)
+                chord_files_id.append(id_list.photo.file_id)
+            chords_db.set_files_id(message.text.lower(), chord_files_id)
+        else:
+            keyboard = types.InlineKeyboardMarkup()
+            keyboard.add(types.InlineKeyboardButton(text='Предложить', callback_data=message.text))
+            bot.send_message(message.chat.id, string_values.text_inline_button, reply_markup=keyboard)
     else:
-        keyboard = types.InlineKeyboardMarkup()
-        keyboard.add(types.InlineKeyboardButton(text='Предложить', callback_data=message.text))
-        bot.send_message(message.chat.id, string_values.text_inline_button, reply_markup=keyboard)
+        for id_list in chord_files_id:
+            bot.send_message(message.chat.id, id_list)
+
 
 
 @bot.callback_query_handler(func=lambda c: True)
