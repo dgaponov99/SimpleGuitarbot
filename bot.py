@@ -107,11 +107,7 @@ def send_chords(message):
                 chords_db.set_files_id(message.text.lower(), ids, caption)
             else:
                 keyboard = types.InlineKeyboardMarkup()
-                keyboard.add(types.InlineKeyboardButton(text=string_values.to_offer,
-                                                        callback_data=string_values.message_to_admins.format(
-                                                            str(message.from_user.first_name),
-                                                            str(message.chat.id),
-                                                            str(message.text))))
+                keyboard.add(types.InlineKeyboardButton(text=string_values.to_offer, callback_data=str(message.text)))
                 bot.send_message(message.chat.id, string_values.text_inline_button, reply_markup=keyboard)
         else:
             for chord_file_id in chord_files_id:
