@@ -92,10 +92,9 @@ def send_chords(message):
             img = requests.get(chord_url)
             bot.send_photo(message.chat.id, img.content, caption=caption)
     else:
-        bot.send_message(message.chat.id, 'Такого аккорда нет')  # Добавить кнопку предложения
         keyboard = types.InlineKeyboardMarkup()
         keyboard.add(types.InlineKeyboardButton(text='Предложить', callback_data=message.text))
-        bot.send_message(message.chat.id, "Если такой аккорд существует, предложите его", reply_markup=keyboard)
+        bot.send_message(message.chat.id, string_values.text_inline_button, reply_markup=keyboard)
 
 
 @bot.callback_query_handler(func=lambda c: True)
