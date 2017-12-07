@@ -45,9 +45,9 @@ def send_help(message):
     bot.send_message(message.chat.id, string_values.help_description, parse_mode='HTML')
 
 
-@bot.message_handler(commands=['tutorial_image'])
+@bot.message_handler(commands=['tutorials'])
 def send_tutorial(message):
-    """Команда /tutorial_image"""
+    """Команда /tutorials"""
     bot.send_message(message.chat.id, string_values.tutorial, parse_mode='HTML')
 
 
@@ -60,10 +60,7 @@ def send_tuning_uku(message):
 @bot.message_handler(commands=['parts'])
 def send_parts(message):
     """Команда /parts"""
-    image = open('res/tutorial_image/parts_of_guitar.jpg', 'rb')
-    msg = bot.send_photo(message.chat.id, image)
-    bot.send_message(message.chat.id, msg.photo[0].file_id)
-    image.close()
+    bot.send_photo(message.chat.id, files_id.parts_of_guitar)
 
 
 @bot.message_handler(commands=['tuning'])
