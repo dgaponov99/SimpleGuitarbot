@@ -119,7 +119,8 @@ def send_chords(message):
 def inline(c):
     """Отправка администраторам заявки на рассмотрение аккорда"""
     for admin in config.ADMINS:
-        bot.send_message(admin, string_values.message_to_admins.format(c.user.first_name, c.message.chat.id. c.message.text))
+        bot.send_message(admin, string_values.message_to_admins.format(str(c.user.first_name),
+                                                                       str(c.message.chat.id), str(c.message.text)))
 
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера
