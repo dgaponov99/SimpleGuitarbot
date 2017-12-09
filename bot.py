@@ -139,6 +139,7 @@ def inline(c):
     """Отправка администраторам заявки на рассмотрение аккорда"""
     a = c.data.split('$')
     if a[0] == '^':
+        # Создание вариантов ответа у администраторов
         for admin in config.ADMINS:
             keyboard = types.InlineKeyboardMarkup()
             keyboard.add(
@@ -153,14 +154,17 @@ def inline(c):
                                                c.from_user.first_name)))
             bot.send_message(admin, string_values.message_to_admins.format(a[1], a[2], a[3]), reply_markup=keyboard)
     elif a[0] == '+':
+        # Уведомление о добавлении аккорда
         bot.send_message(a[1], string_values.message_to_users_agree)
         for admin in config.ADMINS:
             bot.send_message(admin, str(c.from_user.first_name) + string_values.message_to_admins_agree)
     elif a[0] == '-':
+        # Уведомление об отклонении заявки
         bot.send_message(a[1], string_values.message_to_users_disagree)
         for admin in config.ADMINS:
             bot.send_message(admin, str(c.from_user.first_name) + string_values.message_to_admins_disagree)
     elif a[0] == '*':
+        # Уведомление об обработки заявки
         bot.send_message(a[1], string_values.message_to_users_done)
         for admin in config.ADMINS:
             bot.send_message(admin, str(c.from_user.first_name) + string_values.message_to_admins_done)
