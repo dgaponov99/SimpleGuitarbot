@@ -155,15 +155,15 @@ def inline(c):
     elif a[0] == '+':
         bot.send_message(a[1], string_values.message_to_users_agree)
         for admin in config.ADMINS:
-            bot.send_message(admin, a[2] + string_values.message_to_admins_agree)
+            bot.send_message(admin, str(c.from_user.first_name) + string_values.message_to_admins_agree)
     elif a[0] == '-':
         bot.send_message(a[1], string_values.message_to_users_disagree)
         for admin in config.ADMINS:
-            bot.send_message(admin, a[2] + string_values.message_to_admins_disagree)
+            bot.send_message(admin, str(c.from_user.first_name) + string_values.message_to_admins_disagree)
     elif a[0] == '*':
         bot.send_message(a[1], string_values.message_to_users_done)
         for admin in config.ADMINS:
-            bot.send_message(admin, a[2] + string_values.message_to_admins_done)
+            bot.send_message(admin, str(c.from_user.first_name) + string_values.message_to_admins_done)
 
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера
