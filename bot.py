@@ -126,22 +126,22 @@ def inline(c):
         for admin in config.ADMINS:
             keyboard = types.InlineKeyboardMarkup()
             keyboard.add(
-                types.InlineKeyboardButton(text=string_values.agree, callback_data='+$' + str(c.message.chat.id)),
-                types.InlineKeyboardButton(text=string_values.disagree, callback_data='-$' + str(c.message.chat.id)),
-                types.InlineKeyboardButton(text=string_values.done, callback_data='*$' + str(c.message.chat.id)))
+                types.InlineKeyboardButton(text=string_values.agree, callback_data='+$' + str(c.from_user.first_name)),
+                types.InlineKeyboardButton(text=string_values.disagree, callback_data='-$' + str(c.from_user.first_name)),
+                types.InlineKeyboardButton(text=string_values.done, callback_data='*$' + str(c.from_user.first_name)))
             bot.send_message(admin, string_values.message_to_admins.format(a[1], a[2], a[3]), reply_markup=keyboard)
     elif a[0] == '+':
         bot.send_message(a[1], string_values.message_to_users_agree)
         for admin in config.ADMINS:
-            bot.send_message(admin, admin + string_values.message_to_admins_agree)
+            bot.send_message(admin, a[1] + string_values.message_to_admins_agree)
     elif a[0] == '-':
         bot.send_message(a[1], string_values.message_to_users_disagree)
         for admin in config.ADMINS:
-            bot.send_message(admin, admin + string_values.message_to_admins_disagree)
+            bot.send_message(admin, a[1] + string_values.message_to_admins_disagree)
     elif a[0] == '*':
         bot.send_message(a[1], string_values.message_to_users_done)
         for admin in config.ADMINS:
-            bot.send_message(admin, admin + string_values.message_to_admins_done)
+            bot.send_message(admin, a[1] + string_values.message_to_admins_done)
 
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера
