@@ -8,6 +8,7 @@ from telebot import types
 import config
 from res import string_values
 from res import files_id
+from spliter import split_array_of_ten
 import parser
 import chords_db
 
@@ -98,7 +99,7 @@ def send_chords(message):
             caption, chord_urls = chord.get_Url()
             if len(caption) > 0:
                 ids = []
-                chord_urls = split_array(chord_urls)
+                chord_urls = split_array_of_ten(chord_urls)
                 for url_box in chord_urls:
                     if len(url_box) > 1:
                         images = []
@@ -112,7 +113,6 @@ def send_chords(message):
                         file = bot.send_photo(message.chat.id, img.content)
                         ids.append(file.photo[0].file_id)
                 chords_db.set_files_id(message.text.lower(), ids, caption)
-                bot.send_message(message.chat.id, string_values.update_complete)
             else:
                 keyboard = types.InlineKeyboardMarkup()
                 keyboard.add(types.InlineKeyboardButton(text=string_values.to_offer,
@@ -121,9 +121,7 @@ def send_chords(message):
                                                             message.chat.id) + '$' + str(message.text)))
                 bot.send_message(message.chat.id, string_values.text_inline_button, reply_markup=keyboard)
         else:
-            # for chord_file_id in chord_files_id:
-            #     bot.send_photo(message.chat.id, chord_file_id, caption=cap)
-            chord_files_id = split_array(chord_files_id)
+            chord_files_id = split_array_of_ten(chord_files_id)
             for chord_files_box in chord_files_id:
                 if len(chord_files_box) > 1:
                     images = []
@@ -132,9 +130,6 @@ def send_chords(message):
                     bot.send_media_group(message.chat.id, images)
                 else:
                     bot.send_photo(message.chat.id, chord_files_box[0])
-
-
-
     else:
         bot.send_message(message.chat.id, string_values.not_exist)
 
@@ -169,24 +164,6 @@ def inline(c):
         bot.send_message(a[1], string_values.message_to_users_done)
         for admin in config.ADMINS:
             bot.send_message(admin, a[2] + string_values.message_to_admins_done)
-
-
-def split_array(array):
-    a = []
-    b = []
-    iter = 0
-    for arr in array:
-        if iter < 10:
-            a.append(arr)
-        else:
-            b.append(a)
-            a = []
-            a.append(arr)
-            iter = 0
-        iter += 1
-    if len(a) > 0:
-        b.append(a)
-    return b
 
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))  # Запуск сервера
