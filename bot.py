@@ -110,7 +110,7 @@ def send_chords(message):
                     else:
                         img = requests.get(url_box[0])
                         file = bot.send_photo(message.chat.id, img.content)
-                        ids.append(file.photo.file_id)
+                        ids.append(file.photo[0].file_id)
                 chords_db.set_files_id(message.text.lower(), ids, caption)
                 bot.send_message(message.chat.id, string_values.update_complete)
             else:
