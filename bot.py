@@ -97,7 +97,7 @@ def send_chords(message):
             chord = parser.Images_chord(message.text)
             caption, chord_urls = chord.get_Url()
             if len(caption) > 0:
-                bot.send_message(message.cht.id, caption)
+                bot.send_message(message.chat.id, caption)
                 ids = []
                 # for chord_url in chord_urls:
                 #     img = requests.get(chord_url)
