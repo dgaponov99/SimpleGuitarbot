@@ -126,9 +126,9 @@ def inline(c):
         for admin in config.ADMINS:
             keyboard = types.InlineKeyboardMarkup()
             keyboard.add(
-                types.InlineKeyboardButton(text=string_values.agree, callback_data='+$' + str(c.from_user.first_name)),
-                types.InlineKeyboardButton(text=string_values.disagree, callback_data='-$' + str(c.from_user.first_name)),
-                types.InlineKeyboardButton(text=string_values.done, callback_data='*$' + str(c.from_user.first_name)))
+                types.InlineKeyboardButton(text=string_values.agree, callback_data='+$' + a[1]),
+                types.InlineKeyboardButton(text=string_values.disagree, callback_data='-$' + a[1]),
+                types.InlineKeyboardButton(text=string_values.done, callback_data='*$' + a[1]))
             bot.send_message(admin, string_values.message_to_admins.format(a[1], a[2], a[3]), reply_markup=keyboard)
     elif a[0] == '+':
         bot.send_message(a[1], string_values.message_to_users_agree)
