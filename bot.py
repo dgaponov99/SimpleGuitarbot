@@ -98,10 +98,16 @@ def send_chords(message):
             caption, chord_urls = chord.get_Url()
             if len(caption) > 0:
                 ids = []
+                # for chord_url in chord_urls:
+                #     img = requests.get(chord_url)
+                #     file = bot.send_photo(message.chat.id, img.content, caption=caption)
+                #     ids.append(file.photo[0].file_id)
+                images = []
                 for chord_url in chord_urls:
-                    img = requests.get(chord_url)
-                    file = bot.send_photo(message.chat.id, img.content, caption=caption)
-                    ids.append(file.photo[0].file_id)
+                    images.append(types.InputMediaPhoto(chord_url))
+                messages_file = bot.send_media_group(message.chat.id, images)
+                for message_file in messages_file:
+                    ids.append(message_file.photo[0].file_id)
                 chords_db.set_files_id(message.text.lower(), ids, caption)
                 bot.send_message(message.chat.id, string_values.update_complete)
             else:
