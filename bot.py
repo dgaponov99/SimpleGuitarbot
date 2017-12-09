@@ -97,12 +97,7 @@ def send_chords(message):
             chord = parser.Images_chord(message.text)
             caption, chord_urls = chord.get_Url()
             if len(caption) > 0:
-                bot.send_message(message.chat.id, caption)
                 ids = []
-                # for chord_url in chord_urls:
-                #     img = requests.get(chord_url)
-                #     file = bot.send_photo(message.chat.id, img.content, caption=caption)
-                #     ids.append(file.photo[0].file_id)
                 chord_urls = split_array(chord_urls)
                 for url_box in chord_urls:
                     if len(url_box) > 1:
@@ -116,12 +111,6 @@ def send_chords(message):
                         img = requests.get(url_box[0])
                         file = bot.send_photo(message.chat.id, img.content)
                         ids.append(file.photo.file_id)
-
-                # for chord_url in chord_urls:
-                #     images.append(types.InputMediaPhoto(chord_url))
-                # messages_file = bot.send_media_group(message.chat.id, images)
-                # for message_file in messages_file:
-                #     ids.append(message_file.photo[0].file_id)
                 chords_db.set_files_id(message.text.lower(), ids, caption)
                 bot.send_message(message.chat.id, string_values.update_complete)
             else:
@@ -132,8 +121,20 @@ def send_chords(message):
                                                             message.chat.id) + '$' + str(message.text)))
                 bot.send_message(message.chat.id, string_values.text_inline_button, reply_markup=keyboard)
         else:
-            for chord_file_id in chord_files_id:
-                bot.send_photo(message.chat.id, chord_file_id, caption=cap)
+            # for chord_file_id in chord_files_id:
+            #     bot.send_photo(message.chat.id, chord_file_id, caption=cap)
+            chord_files_id = split_array(chord_files_id)
+            for chord_files_box in chord_files_id:
+                if len(chord_files_box) > 1:
+                    images = []
+                    for chord_file_id in chord_files_box:
+                        images.append(types.InputMediaPhoto(chord_file_id))
+                    bot.send_media_group(message.chat.id, images)
+                else:
+                    bot.send_photo(message.chat.id, chord_files_box[0])
+
+
+
     else:
         bot.send_message(message.chat.id, string_values.not_exist)
 
