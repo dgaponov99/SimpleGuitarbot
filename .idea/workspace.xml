@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="deb95bd2-be36-45ec-9f53-b7dbca5dc2cc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/string_values.py" afterPath="$PROJECT_DIR$/res/string_values.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bot.py" afterPath="$PROJECT_DIR$/bot.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,14 +35,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bot.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="128" column="64" lean-forward="false" selection-start-line="128" selection-start-column="64" selection-end-line="128" selection-end-column="64" />
+            <state relative-caret-position="291">
+              <caret line="128" column="27" lean-forward="true" selection-start-line="128" selection-start-column="27" selection-end-line="128" selection-end-column="27" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exam.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exam.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="string_values.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="string_values.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/string_values.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            <state relative-caret-position="-454">
+              <caret line="85" column="37" lean-forward="true" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -152,8 +162,9 @@
         <option value="$PROJECT_DIR$/chords_db.py" />
         <option value="$PROJECT_DIR$/parser.py" />
         <option value="$PROJECT_DIR$/res/files_id.py" />
-        <option value="$PROJECT_DIR$/bot.py" />
         <option value="$PROJECT_DIR$/res/string_values.py" />
+        <option value="$PROJECT_DIR$/exam.py" />
+        <option value="$PROJECT_DIR$/bot.py" />
       </list>
     </option>
   </component>
@@ -351,24 +362,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mongodb">
-    <configuration name="bot2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SimpleGuitarbot" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bot2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.exam">
     <configuration name="bot3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -382,6 +376,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SimpleGuitarbot" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="exam" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SimpleGuitarbot" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exam.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -438,19 +449,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.bot2" />
-      <item index="1" class="java.lang.String" itemvalue="Python.bot3" />
-      <item index="2" class="java.lang.String" itemvalue="Python.mongodb" />
-      <item index="3" class="java.lang.String" itemvalue="Python.prob" />
-      <item index="4" class="java.lang.String" itemvalue="Python.try" />
+      <item index="0" class="java.lang.String" itemvalue="Python.bot3" />
+      <item index="1" class="java.lang.String" itemvalue="Python.mongodb" />
+      <item index="2" class="java.lang.String" itemvalue="Python.prob" />
+      <item index="3" class="java.lang.String" itemvalue="Python.try" />
+      <item index="4" class="java.lang.String" itemvalue="Python.exam" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.mongodb" />
-        <item index="1" class="java.lang.String" itemvalue="Python.try" />
-        <item index="2" class="java.lang.String" itemvalue="Python.prob" />
-        <item index="3" class="java.lang.String" itemvalue="Python.bot3" />
-        <item index="4" class="java.lang.String" itemvalue="Python.bot2" />
+        <item index="0" class="java.lang.String" itemvalue="Python.exam" />
+        <item index="1" class="java.lang.String" itemvalue="Python.mongodb" />
+        <item index="2" class="java.lang.String" itemvalue="Python.try" />
+        <item index="3" class="java.lang.String" itemvalue="Python.prob" />
+        <item index="4" class="java.lang.String" itemvalue="Python.bot3" />
       </list>
     </recent_temporary>
   </component>
@@ -464,20 +475,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511019813467</updated>
-    </task>
-    <task id="LOCAL-00023" summary="return">
-      <created>1512251397966</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1512251397966</updated>
-    </task>
-    <task id="LOCAL-00024" summary="add caption">
-      <created>1512251537467</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1512251537467</updated>
     </task>
     <task id="LOCAL-00025" summary="get tuner id">
       <created>1512260734945</created>
@@ -808,7 +805,21 @@
       <option name="project" value="LOCAL" />
       <updated>1512780463791</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Admin mode complete">
+      <created>1512780850322</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1512780850322</updated>
+    </task>
+    <task id="LOCAL-00073" summary="try media group">
+      <created>1512785141880</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1512785141880</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -819,11 +830,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5059761" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32747602" sideWeight="0.49083665" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3258786" sideWeight="0.49083665" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258786" sideWeight="0.49721116" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="556" y="69" width="315" height="626" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3258786" sideWeight="0.49402392" order="10" side_tool="false" content_ui="tabs" x="82" y="280" width="1263" height="204" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258786" sideWeight="0.49402392" order="10" side_tool="false" content_ui="tabs" x="82" y="280" width="1263" height="204" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -908,8 +919,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="try change" />
-    <MESSAGE value="return" />
     <MESSAGE value="add caption" />
     <MESSAGE value="get tuner id" />
     <MESSAGE value="with tuner" />
@@ -933,7 +942,9 @@
     <MESSAGE value="try fix" />
     <MESSAGE value="change Admins mode" />
     <MESSAGE value="change Admins mode&#10;try fix bag" />
-    <option name="LAST_COMMIT_MESSAGE" value="change Admins mode&#10;try fix bag" />
+    <MESSAGE value="Admin mode complete" />
+    <MESSAGE value="try media group" />
+    <option name="LAST_COMMIT_MESSAGE" value="try media group" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -942,7 +953,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bot1.py" />
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -1109,21 +1119,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bot.py">
+    <entry file="file://$PROJECT_DIR$/res/string_values.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="128" column="64" lean-forward="false" selection-start-line="128" selection-start-column="64" selection-end-line="128" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-454">
+          <caret line="85" column="37" lean-forward="true" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/string_values.py">
+    <entry file="file://$PROJECT_DIR$/exam.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="128" column="27" lean-forward="true" selection-start-line="128" selection-start-column="27" selection-end-line="128" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
