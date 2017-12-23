@@ -1,7 +1,6 @@
 """Параметры бота"""
 
-# TOKEN = '442370610:AAHZ0eYC7Bx9Qsm9qNIaJJgK-LKUgmxjUj4'
-TOKEN = '492801012:AAF1CTcohqUs2WABUEX40RvQ2oKVl3XL_UI'
+TOKEN = '442370610:AAHZ0eYC7Bx9Qsm9qNIaJJgK-LKUgmxjUj4'
 URL = 'https://immense-earth-21017.herokuapp.com/' + TOKEN
 LINK = 'mongodb://dgaponov99:dg99561421@simpleguitarbot-shard-00-00-ze8qe.mongodb.net:27017,' \
        + 'simpleguitarbot-shard-00-01-ze8qe.mongodb.net:27017,simpleguitarbot-shard-00-02-ze8qe.mongodb.net:27017' \
