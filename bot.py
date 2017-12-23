@@ -108,8 +108,10 @@ def send_chords(message):
                         try:
                             messages_file = bot.send_media_group(message.chat.id, images)
                         except Exception:
-                            bot.send_message(message.chat.id, 'Ошибка отправки')
                             messages_file = []
+                            bot.send_message(message.chat.id, string_values.message_exception)
+                            for admin in config.ADMINS:
+                                bot.send_message(admin, string_values.message_exception_loading_media_to_admin)
                         for message_file in messages_file:
                             ids.append(message_file.photo[0].file_id)
                     else:

@@ -12,6 +12,9 @@ disagree = 'Отклонил'
 done = 'Добавил'
 not_exist = 'Такого аккорда не существует'
 
+message_exception = 'Ошибка отправки. Информация передана разработчикам.'
+message_exception_loading_media_to_admin = 'Ошибка отправки media_group'
+
 message_to_admins = 'Пользователь {} (chat_id="{}") отправил на рассмотрение аккорд "{}"'
 message_to_users_agree = 'Аккорд находится на рассмотрении'
 message_to_users_disagree = 'Мы не нашли такого аккорда в глобальной сети. Отклонено'
