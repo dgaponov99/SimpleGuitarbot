@@ -103,6 +103,7 @@ def send_chords(message):
                 for url_box in chord_urls:
                     if len(url_box) > 1:
                         images = []
+                        print(url_box)
                         for chord_url in url_box:
                             images.append(types.InputMediaPhoto(chord_url))
                         try:
