@@ -105,9 +105,12 @@ def send_chords(message):
                         images = []
                         for chord_url in url_box:
                             images.append(types.InputMediaPhoto(chord_url))
-                        messages_file = bot.send_media_group(message.chat.id, images)
-                        for message_file in messages_file:
-                            ids.append(message_file.photo[0].file_id)
+                        try:
+                            messages_file = bot.send_media_group(message.chat.id, images)
+                            for message_file in messages_file:
+                                ids.append(message_file.photo[0].file_id)
+                        except Exception:
+                            bot.send_message(message.chat.id, 'Ошибка отправки')
                     else:
                         img = requests.get(url_box[0])
                         file = bot.send_photo(message.chat.id, img.content)
