@@ -2,5 +2,4 @@ pyTelegramBotApi == 3.5.0
 flask
 requests
 bs4
-os
 pymongo == 3.4.0

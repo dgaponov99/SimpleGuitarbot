@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deb95bd2-be36-45ec-9f53-b7dbca5dc2cc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bot.py" afterPath="$PROJECT_DIR$/bot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,11 +49,21 @@
       <file leaf-file-name="bot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="166" column="58" lean-forward="true" selection-start-line="166" selection-start-column="58" selection-end-line="166" selection-end-column="58" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,7 +143,6 @@
         <option value="$PROJECT_DIR$/prob1.py" />
         <option value="$PROJECT_DIR$/prob.py" />
         <option value="$PROJECT_DIR$/mongodb.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/try.py" />
         <option value="$PROJECT_DIR$/chords_db.py" />
         <option value="$PROJECT_DIR$/parser.py" />
@@ -143,6 +152,7 @@
         <option value="$PROJECT_DIR$/spliter.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/bot.py" />
       </list>
     </option>
@@ -342,20 +352,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511019813467</updated>
-    </task>
-    <task id="LOCAL-00041" summary="debugging...">
-      <created>1512591937090</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1512591937090</updated>
-    </task>
-    <task id="LOCAL-00042" summary="debugging...">
-      <created>1512593678050</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1512593678050</updated>
     </task>
     <task id="LOCAL-00043" summary="debugging...">
       <created>1512593905652</created>
@@ -686,7 +682,21 @@
       <option name="project" value="LOCAL" />
       <updated>1514034755532</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="try without gitignoge">
+      <created>1514034860110</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1514034860110</updated>
+    </task>
+    <task id="LOCAL-00091" summary="try run">
+      <created>1514035261427</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1514035261427</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -779,8 +789,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="try to fix bugs" />
-    <MESSAGE value="try in sync manner" />
     <MESSAGE value="debugging..." />
     <MESSAGE value="adding beauty" />
     <MESSAGE value="fix bag" />
@@ -804,7 +812,9 @@
     <MESSAGE value="try 443" />
     <MESSAGE value="try 80" />
     <MESSAGE value="try 88" />
-    <option name="LAST_COMMIT_MESSAGE" value="try 88" />
+    <MESSAGE value="try without gitignoge" />
+    <MESSAGE value="try run" />
+    <option name="LAST_COMMIT_MESSAGE" value="try run" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -911,7 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/res/files_id.py" />
     <entry file="file://$PROJECT_DIR$/exam.py" />
     <entry file="file://$PROJECT_DIR$/res/string_values.py" />
@@ -948,14 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spliter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -964,10 +965,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="166" column="58" lean-forward="true" selection-start-line="166" selection-start-column="58" selection-end-line="166" selection-end-column="58" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
