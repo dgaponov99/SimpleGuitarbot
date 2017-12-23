@@ -177,5 +177,5 @@ def inline(c):
             bot.send_message(admin, str(c.from_user.first_name) + string_values.message_to_admins_done)
 
 
-server.run(host="0.0.0.0", port=88)
+server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
 server = Flask(__name__)
