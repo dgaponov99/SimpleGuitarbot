@@ -107,15 +107,17 @@ def send_chords(message):
                             images.append(types.InputMediaPhoto(chord_url))
                         try:
                             messages_file = bot.send_media_group(message.chat.id, images)
-                            for message_file in messages_file:
-                                ids.append(message_file.photo[0].file_id)
                         except Exception:
                             bot.send_message(message.chat.id, 'Ошибка отправки')
+                            messages_file = []
+                        for message_file in messages_file:
+                            ids.append(message_file.photo[0].file_id)
                     else:
                         img = requests.get(url_box[0])
                         file = bot.send_photo(message.chat.id, img.content)
                         ids.append(file.photo[0].file_id)
-                chords_db.set_files_id(message.text.lower(), ids, caption)
+                if len(ids) > 0:
+                    chords_db.set_files_id(message.text.lower(), ids, caption)
             else:
                 keyboard = types.InlineKeyboardMarkup()
                 keyboard.add(types.InlineKeyboardButton(text=string_values.to_offer,

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deb95bd2-be36-45ec-9f53-b7dbca5dc2cc" name="Default" comment="">
+    <list default="true" id="deb95bd2-be36-45ec-9f53-b7dbca5dc2cc" name="Default" comment="Admin mode is complete">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_12_17_18_21__Default_.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_12_17_18_21__Default_/shelved.patch" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bot.py" afterPath="$PROJECT_DIR$/bot.py" />
     </list>
-    <ignored path="$PROJECT_DIR$/.idea/shelf/" />
+    <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,24 +27,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Procfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Procfile">
+      <file leaf-file-name="bot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="265">
+              <caret line="122" column="54" lean-forward="false" selection-start-line="122" selection-start-column="54" selection-end-line="122" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bot.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bot.py">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="159" column="51" lean-forward="false" selection-start-line="159" selection-start-column="51" selection-end-line="159" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -165,6 +167,7 @@
         <option value="$PROJECT_DIR$/exam.py" />
         <option value="$PROJECT_DIR$/res/string_values.py" />
         <option value="$PROJECT_DIR$/spliter.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/bot.py" />
       </list>
     </option>
@@ -206,7 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -224,6 +226,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -364,27 +367,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511019813467</updated>
-    </task>
-    <task id="LOCAL-00031" summary="worker parser">
-      <created>1512550812573</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1512550812573</updated>
-    </task>
-    <task id="LOCAL-00032" summary="worker parser change">
-      <created>1512551032189</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1512551032189</updated>
-    </task>
-    <task id="LOCAL-00033" summary="updates commands">
-      <created>1512585705748</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1512585705755</updated>
     </task>
     <task id="LOCAL-00034" summary="change care">
       <created>1512586464559</created>
@@ -708,7 +690,28 @@
       <option name="project" value="LOCAL" />
       <updated>1512789990162</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="try">
+      <created>1512812119594</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1512812119595</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Admin mode is complete">
+      <created>1512812738206</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1512812738206</updated>
+    </task>
+    <task id="LOCAL-00082" summary="add gitignore&#10;try check bug">
+      <created>1514029226788</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1514029226790</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -719,11 +722,11 @@
       <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5059761" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32747602" sideWeight="0.49083665" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3258786" sideWeight="0.49721116" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258786" sideWeight="0.49721116" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258786" sideWeight="0.49402392" order="10" side_tool="false" content_ui="tabs" x="82" y="280" width="1263" height="204" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15201901" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23162939" sideWeight="0.49402392" order="10" side_tool="false" content_ui="tabs" x="82" y="280" width="1263" height="204" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1543943" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -801,9 +804,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="with tuner" />
-    <MESSAGE value=" add tutorials" />
-    <MESSAGE value="small changes" />
     <MESSAGE value="add parser" />
     <MESSAGE value="worker parser" />
     <MESSAGE value="worker parser change" />
@@ -826,7 +826,10 @@
     <MESSAGE value="try media group. adding" />
     <MESSAGE value="try media group" />
     <MESSAGE value="send chord in method send_media_group()" />
-    <option name="LAST_COMMIT_MESSAGE" value="send chord in method send_media_group()" />
+    <MESSAGE value="try" />
+    <MESSAGE value="Admin mode is complete" />
+    <MESSAGE value="add gitignore&#10;try check bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gitignore&#10;try check bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -835,7 +838,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webhook_cert.pem" />
     <entry file="file://$PROJECT_DIR$/webhook_pkey.pem" />
     <entry file="file://$PROJECT_DIR$/Bot.py" />
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/telebot/__init__.py">
@@ -1010,10 +1012,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="159" column="51" lean-forward="false" selection-start-line="159" selection-start-column="51" selection-end-line="159" selection-end-column="51" />
+        <state relative-caret-position="265">
+          <caret line="122" column="54" lean-forward="false" selection-start-line="122" selection-start-column="54" selection-end-line="122" selection-end-column="54" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
